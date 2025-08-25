@@ -1,0 +1,26 @@
+h1{
+    background-color: darkblue;
+}
+h2{
+    background-color: green;
+}
+
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color: orange;
+    /*1 giá trị (cách xung quanh bằng giá trị đó)*/
+    /*2 giá trị: giá trị đầu (trên /dưới)
+                giá trị 2 (trái, phải)*/
+                /*4 giá trị :trên- phải - dưới -trái*/
+    margin: 50px 10px 100px 30px;
+    width: 50%;
+    /*auto cân khổi ra giữa*/
+    margin: 50px auto;
+    padding: 100px;
+
+}
+.box3{
+    background-color: chartreuse;
+}
