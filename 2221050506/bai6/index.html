@@ -9,6 +9,7 @@
 
 <body>
     <div class="container">
+        <!-- Left Sidebar -->
         <div class="sidebar">
             <h2>Your Library</h2>
             <input type="text" class="search-input" placeholder="Search...">
@@ -21,27 +22,33 @@
             <div class="recents">
                 <h3>Recents</h3>
                 <ul>
-                    <li>Phệ Mau (Đàn Cả Gõ Original Sou... - MAYDAYS</li>
+                    <li>Phép Màu (Đàn Cá Gỗ Original) Sou... - MAYDAYS</li>
                     <li>Hiphop Playlist - Kei</li>
                     <li>Fresh Finds Vietnam Playlist - Spotify</li>
                     <li>Wren Evans - Artist</li>
                     <li>Maroon 5 Hits Playlist - maroon5</li>
-                    <li>dongvu harmony Album - Đen</li>
+                    <li>dongvui harmony Album - Đen</li>
                     <li>Tinh Nhan Oi Single - Orange</li>
                     <li>Tết Playlist - Kei</li>
                     <li>Anne-Marie - Artist</li>
                 </ul>
             </div>
         </div>
-        <div class="main-content">
-            <div class="search-bar">
-                <input type="text" placeholder="What do you want to play?">
+         <!-- Main Content -->
+    <div class="main-content">
+           <div class="header">
+                <span class="icon">icon home</span>
+                <input type="text" class="search" placeholder="Search...">
             </div>
-            <div class="tabs">
-                <button class="tab active">All</button>
-                <button class="tab">Music</button>
-                <button class="tab">Podcasts</button>
-            </div>
+
+        <div class="filters">
+            <button class="active">All</button>
+            <button>Music</button>
+            <button>Podcasts</button>
+        </div>
+        
+            
+            
             <div class="content-area">
                 <h3>Made For Kel</h3>
                 <div class="grid">
@@ -53,22 +60,48 @@
                         <img src="./maroon5.jpg" alt="" />
                         <p>Maroon 5, Taylor Swift, Ariana Grande and...</p>
                     </article>
-                    <div class="card">EM XINH SAY HI! The Masked Singer, Chi Pu...</div>
-                    <div class="card">Ed Sheeran, Adele, Jason Mraz and more</div>
-                    <div class="card">Đài Tiếng Nói 04</div>
+                    <article class="card">
+                        <img src="./sayhi.jpg" alt="" />
+                        <p>EM XINH SAY HI! The Masked Singer, Chi Pu...</p>
+                    </article>
+                    <article class="card">
+                        <img src="./Ed Sheeran, Adele, Jason Mraz and more.jpg" alt="" />
+                        <p>Ed Sheeran, Adele, Jason Mraz and more</p>
+                    </article>
+                    <article class="card">
+                        <img src="./Đen.jpg" alt="" />
+                        <p>Đen, Andree Right Hand, ANH TRAI"SA...</p>
+                    </article>
                 </div>
                 <h3>Jump back in</h3>
                 <div class="grid">
-                    <div class="card">Tưng Ngây Nhử Mai Mãi nhưngtronglinh</div>
-                    <div class="card">Phệ Mau (Đàn Cả Gõ Original... - MAYDAYS, Minh Tc</div>
-                    <div class="card">Having a bad day? We know how it feels!</div>
-                    <div class="card">Nhửn nhày theo nhửng giai điệu mơ...</div>
-                    <div class="card">sombrrn album "I barely know...</div>
+                    <article class="card">
+                        <img src="./Từng ngày.jpg" alt="" />
+                        <p>Từng Ngày Như Mãi Mãi buitruonglinh</p>
+                    </article>
+                   <article class="card">
+                        <img src="./phép màu.jpg" alt="" />
+                        <p>Phép Màu (Đàn Cá Gỗ Original)... - MAYDAYS, Minh Tốc & Lam</p>
+                    </article>
+                    <article class="card">
+                        <img src="./badday.jpg" alt="" />
+                        <p>Having a bad day? We know how it feels!</p>
+                    </article>
+                    <article class="card">
+                        <img src="./nhunnhay.png" alt="" />
+                        <p>Nhún nhảy theo những giai điệu mới...</p>
+                    </article>
+                   <article class="card">
+                        <img src="./sombrrn album.jpg" alt="" />
+                        <p>sombrrn album "I barely know...</p>
+                    </article>
                 </div>
             </div>
-        </div>
+     </div>
+        <!-- Right Sidebar -->
         <div class="right-panel">
             <h3>Liked Songs</h3>
+            <img src="./the paper.jpg" alt="Gym Class Heroes">
             <ul>
                 <li>bandaids</li>
                 <li>songs to scream in the car</li>
@@ -77,7 +110,7 @@
             <button class="show-all">Show all</button>
             <h3>Stereo Hearts (feat. Adam Levine)</h3>
             <div class="artist-info">
-                <img src="https://via.placeholder.com/150" alt="Gym Class Heroes">
+                <img src="./gymclass.jpg" alt="">
                 <div>
                     <p>Gym Class Heroes<br>12,468,820 monthly listeners</p>
                     <button>Follow</button>

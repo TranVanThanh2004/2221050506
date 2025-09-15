@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
 .container {
     display: flex;
     height: 90vh;
@@ -49,34 +56,57 @@
 }
 
 .main-content {
-    width: 50%;
-    background-color: #121212;
     padding: 20px;
 }
 
-.search-bar input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.tabs {
-    margin: 20px 0;
+.header .icon {
+  font-size: 14px;
 }
 
-.tab {
-    background: none;
-    border: none;
-    color: #b3b3b3;
-    padding: 10px;
-    margin-right: 10px;
-    cursor: pointer;
+.search {
+  flex: 1;
+  max-width: 500px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
 }
 
-.tab.active {
-    color: #fff;
-    border-bottom: 2px solid #1db954;
+/* Filter buttons */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
+
+.filters button {
+  background: #222;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filters button.active {
+  background: white;
+  color: black;
+}
+
+.filters button:hover {
+  background: #444;
+}
+
 
 .grid {
     display: grid;
@@ -87,8 +117,14 @@
 .card {
     background-color: #282828;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
+}
+.card img {
+    width: 150px;   /* chỉnh kích thước rộng */
+    height: 150px;  /* chỉnh chiều cao */
+    object-fit: cover; /* giữ ảnh không méo */
+    border-radius: 5px; /* bo góc cho đẹp */
 }
 
 .right-panel {
@@ -172,6 +208,6 @@
 
 
                     <article class="card">
-                        <img src="./DiscoverWeekly.jpg" alt="" />
-                        <p>Maroon 5, Taylor Swift, Ariana Grande and...</p>
+                        <img src="" alt="" />
+                        <p>sombrrn album "I barely know...</p>
                     </article>
