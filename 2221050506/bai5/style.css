@@ -18,7 +18,7 @@ li {
 }
 
 .border{
-    border-right: 1px sold grey;
+    border-right: 1px solid grey;
 }
 
 .danhmuc-lienket {
@@ -39,9 +39,10 @@ li {
 }
 
 header {
-    border-bottom: 5px sold #f1f1f2;
+    border-bottom: 5px solid #f1f1f2;
 }
 
+/*phần tin tức*/
 .tin-tuc-container {
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -149,6 +150,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+/* Phần thông báo */
 .section-title {
   font-size: 28px;
   color: #003399;
@@ -221,6 +223,7 @@ select {
   margin-left: 40px;
 }
 
+/* Phần tuyển sinh*/
 .section {
   padding: 30px 60px;
   border-top: 1px solid #ddd;
@@ -295,6 +298,7 @@ select {
   text-decoration: none;
 }
 
+/* Phần đối tác - media - footer */
 .partner-section {
   padding: 30px 60px;
 }

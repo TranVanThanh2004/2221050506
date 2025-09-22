@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script>
+        //để viết chú thích js dùng kí tự //
+        document.writeln("hello world <br>");
+
+        //+ "<br>" là nối chuỗi//
+        //biến//
+        let hoTen = "Tran Van Thanh";
+        document.writeln(hoTen + "<br>");
+
+        //hằng số//
+        const pi = 3.14;
+
+        //phép toán số học//
+       
+        let soThuNhat = 10;
+        let soThuHai = "10";
+        let ketqua;
+        //+
+        ketQua = soThuNhat / soThuHai;
+        document.writeln(ketQua+ "<br>");
+        //để ra document.writeln(ketQua++) phải thêm ketQua++; vào trc 
+        //- * %
+        ketQua++;
+        document.writeln(ketQua+++ "<br>");
+
+        soThuNhat += soThuHai;
+        //soThuNhat= soThuNhat + soThuHai;
+        document.writeln(soThuNhat+ "<br>");
+
+        
+        //phép so sánh và logic
+        document.writeln(soThuNhat == soThuHai+ "<br>");
+        document.writeln(soThuNhat === soThuHai+ "<br>");
+        document.writeln(soThuNhat != soThuHai+ "<br>");
+        document.writeln(soThuNhat !== soThuHai+ "<br>");
+        document.writeln(!(soThuNhat !== soThuHai) + "<br>");
+        //hai dấu == chỉ cần số bằng nhau 
+        //3 dấu === cần tất cả giống nhau
+        
+        //các kiểu dữ liệu
+        let thongTinSinhVien = {
+            hoTen: "Tran Van Thanh",
+            tuoi: "21",
+            gioiTinh: true,
+            lop:"Địa tin học k67"
+        }
+        let diaChiThanh = {
+            thanhPho: "Quang Ninh",
+            quanHuyen: "Đông Triều",
+            soNha: "",
+
+        }
+        
+        document.writeln("Xin chào! " 
+        + thongTinSinhVien.hoTen  
+        + " lớp " 
+        + thongTinSinhVien.lop
+        + " Số nhà:" +
+        thongTinSinhVien.diaChi.soNha
+        + " Đường:" + (thongTinSinhVien.diaChi.duong) +"<br>"
+
+        );
+        let soThuBa = "9.5";
+
+        parseInt(soThuBa);
+
+        document.writeln(typeof (soThuBa));
+    </script>
+</body>
+
+</html>
