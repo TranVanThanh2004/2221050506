@@ -89,22 +89,19 @@
         document.writeln(myString.startsWith("Hello") + "<br>");
 
         //định dạng số
+         //Number
         let pi = 3.14159;
-        document.writeln(pi.toFixed(2) + "<br>"); // 3.14<
-
-        document.writeln(isNan("10") + "<br>"); //false
+        document.writeln(pi.toFixed(2) + "<br>");
+        document.writeln(isNaN('10') + "<br>");
 
         //Date
-        let toDay = new date();
-        document.writeln(toDay);
-        //lấy ra năm 
+        let toDay = new Date();
+        document.writeln(toDay + "<br>");
         document.writeln(toDay.getFullYear() + "<br>");
-        //lấy ra tháng
         document.writeln(toDay.getMonth() + "<br>");
-        //lấy ra ngày
+        document.writeln(toDay.getDay() + "<br>");
         document.writeln(toDay.getDate() + "<br>");
 
-        
 
 
 
