@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let maDonHang = " 3618 "
+
+        let thongTinKhachHang = {
+            hoTen: "Thanh",
+            soDienThoai: 123456789,
+            trangThaiThanhVien: true, // Giá trị boolean là true or false
+            diaChi: {
+                soNha: 36,
+                duong: "Hai bà trưng",
+            },
+            danhSachSanPham: {
+                sp1: {
+                    maSP: "caphe",
+                    tenSP: " Cà Phê",
+                    soLuong: 15,
+                    gia: 200000
+                },
+                sp2: {
+                    maSP: "matcha",
+                    tenSP: " MatCha ",
+                    soLuong: 26,
+                    gia: 200000
+                },
+                sp3: {
+                    maSP: "trasua",
+                    tenSP: "Trà Sữa",
+                    soLuong: 27,
+                    gia: 200000
+                }
+            },
+            trangThai: false,
+            diaChi: "  Đông Triều, Quảng Ninh "
+        }
+
+        let caPHe = thongTinKhachHang.danhSachSanPham.sp1.soLuong * thongTinKhachHang.danhSachSanPham.sp1.gia;
+        document.writeln(caPHe + "<br>");
+
+        let matCha = thongTinKhachHang.danhSachSanPham.sp2.soLuong * thongTinKhachHang.danhSachSanPham.sp2.gia;
+        document.writeln(matCha + "<br>");
+
+        let traSua = thongTinKhachHang.danhSachSanPham.sp3.soLuong * thongTinKhachHang.danhSachSanPham.sp3.gia;
+        document.writeln(traSua + "<br>");
+
+        let tongGiaTriDonHang = caPHe + matCha + traSua;
+        document.writeln(tongGiaTriDonHang + "<br>");
+
+
+
+        //string
+        let hoTen = "Tran Van Thanh";
+        document.writeln(hoTen.length + "<br>");
+
+        //truy cập ký tư
+        let myString = "Hello World";
+        document.writeln(myString[4] + "<br>");
+
+        //cắt chuỗi
+        document.writeln(myString.slice(1, 5) + "<br>");
+
+        //thay thế chuỗi
+        document.writeln(myString.replace(" ", "Hi") + "<br>");
+
+        //chuyển đổi chữ hoa thành chữ thường
+        document.writeln(myString.toUpperCase() + "<br>");
+        document.writeln(myString.toLowerCase() + "<br>");
+
+        //tìm kiếm chuỗi
+        //indexOF(kí tự cần tìm kiếm)
+        //includes
+        document.writeln(myString.indexOf("i") + "<br>");
+        document.writeln(myString.includes("H") + "<br>");
+
+        //tách chuoiix thành mảng split()
+        document.writeln(myString.split("e") + "<br>");
+
+        //kiểm tra chuỗi
+        document.writeln(myString.startsWith("World") + "<br>");
+        document.writeln(myString.startsWith("Hello") + "<br>");
+
+        //định dạng số
+        let pi = 3.14159;
+        document.writeln(pi.toFixed(2) + "<br>"); // 3.14<
+
+        document.writeln(isNan("10") + "<br>"); //false
+
+        //Date
+        let toDay = new date();
+        document.writeln(toDay);
+        //lấy ra năm 
+        document.writeln(toDay.getFullYear() + "<br>");
+        //lấy ra tháng
+        document.writeln(toDay.getMonth() + "<br>");
+        //lấy ra ngày
+        document.writeln(toDay.getDate() + "<br>");
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

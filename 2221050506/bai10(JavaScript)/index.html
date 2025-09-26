@@ -48,34 +48,34 @@
         //3 dấu === cần tất cả giống nhau
         
         //các kiểu dữ liệu
-        let thongTinSinhVien = {
-            hoTen: "Tran Van Thanh",
-            tuoi: "21",
-            gioiTinh: true,
-            lop:"Địa tin học k67"
-        }
-        let diaChiThanh = {
-            thanhPho: "Quang Ninh",
-            quanHuyen: "Đông Triều",
-            soNha: "",
+let thongTinSinhVien = {
+    hoTen: "Tran Van Thanh",
+    tuoi: "21",
+    gioiTinh: true,
+    lop:"Địa tin học k67",
+    diaChi: {                     // ✅ Thêm phần này
+        thanhPho: "Quang Ninh",
+        quanHuyen: "Đông Triều",
+        soNha: "",
+        duong: ""
+    }
+}
 
-        }
-        
-        document.writeln("Xin chào! " 
-        + thongTinSinhVien.hoTen  
-        + " lớp " 
-        + thongTinSinhVien.lop
-        + " Số nhà:" +
-        thongTinSinhVien.diaChi.soNha
-        + " Đường:" + (thongTinSinhVien.diaChi.duong) +"<br>"
+document.writeln("Xin chào! " 
+    + thongTinSinhVien.hoTen  
+    + " lớp " 
+    + thongTinSinhVien.lop
+    + " Số nhà:" + thongTinSinhVien.diaChi.soNha
+    + " Đường:" + (thongTinSinhVien.diaChi.duong) +"<br>"
+);
 
-        );
-        let soThuBa = "9.5";
+let soThuBa = "9.5";
 
-        parseInt(soThuBa);
+parseInt(soThuBa);
 
-        document.writeln(typeof (soThuBa));
-    </script>
+document.writeln(typeof (soThuBa));
+
+</script>
 </body>
 
 </html>
