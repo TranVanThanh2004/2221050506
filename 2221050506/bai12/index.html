@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script>
+
+        //Mảng
+        let arr = [1, 2, 3, 4,'a','b','c', 2, 3];
+        arr[3] = 6; //thay đổi giá trị trong mảng
+        let ten = 'Ten';
+        let thongTin = {
+            ten: ten
+        }
+        document.writeln(typeof (arr) + "<br>"); //object
+        document.writeln(Array.isArray(arr) + "<br>"); //tên biến kiểm tra có phải mảng hay không
+        document.writeln(arr.length + "<br>"); //độ dài mảng
+        document.writeln(arr[2] + "<br>"); //lấy phần tử trong mảng
+        document.writeln(arr.indexOf(3) + "<br>"); //tìm vị trí phần tử trong mảng xuất hiện đầu tiên
+        document.writeln(arr.lastIndexOf(3) + "<br>"); //tìm vị trí phần tử trong mảng xuất hiện cuối cùng
+        document.writeln(arr + "<br>"); //in mảng
+
+        let a, b,c, d;
+        a = [1, 2, 3];
+        b = "JavaScript";
+        c = [42, "JS"];
+        d = a.concat(b, c); //nối mảng
+        //d = d.join('/'); //nối mảng với ký tự phân cách
+        d.pop(); //xóa phần tử cuối mảng
+        d.push("Khởi"); //thêm phần tử vào cuối mảng
+        //d.reverse(); //đảo ngược mảng
+        d.shift(); //xóa phần tử đầu mảng
+        d.unshift(1); //thêm phần tử vào đầu mảng
+        document.writeln(d + "<br>"); //1,2,3,JavaScript,42,JS
+
+
+        //các câu lệnh điều kiện
+        let so = 10000000000000000000000000002;
+        let soCuoi = parseInt(so[so.length - 1]); //lấy chữ số cuối cùng của số
+        if(soCuoi % 2 == 0) {
+            document.writeln(so + " là số chẵn <br>");
+        } else {
+            document.writeln(so + " là số lẻ <br>");
+        }
+
+
+        let now = new Date().getHours(); //lấy giờ hiện tại
+        //5->10: chào buổi sáng
+        //10->13: chào buổi trưa
+        //13->17h: chào buổi chiều
+        //17->22h: chào buổi tối
+        //còn lại: chào buổi đêm
+        if(now >= 5 && now < 10) {
+            document.writeln("Chào buổi sáng <br>");
+        } else if(now >= 10 && now <= 13) {
+            document.writeln("Chào buổi trưa <br>");
+        } else if(now >= 13 && now <= 17) {
+            document.writeln("Chào buổi chiều <br>");
+        } else if(now >= 17 && now <= 22) {
+            document.writeln("Chào buổi tối <br>");
+        } else {
+            document.writeln("Chào buổi đêm <br>");
+        }
+
+
+        // a, b, c
+        //tổng = điểm a nhân 0.6 cộng điểm b nhân 0.3 cộng điểm c nhân 0.1
+        //tổng nằm trong khoảng 8 đến 10 : điểm AbortControl
+        //7 - 8 : b
+        //5 - 7 : c
+        //4 - 5 : d
+        //nhỏ hơn 4: f
+
+        let A = 1;
+        let B = 1;  //btvn tại sao lại ra f
+        let C = 100;
+
+        let tong = A*0.6 + B*0.3 + C*0.1;
+        if(tong >= 8 && tong <= 10) {
+            document.writeln("Điểm của bạn là: " + tong + " - Xếp loại: A <br>");
+        } else if(tong >= 7 && tong < 8) {
+            document.writeln("Điểm của bạn là: " + tong + " - Xếp loại: B <br>");
+        } else if(tong >= 5 && tong < 7) {
+            document.writeln("Điểm của bạn là: " + tong + " - Xếp loại: C <br>");
+        } else if(tong >= 4 && tong < 5) {
+            document.writeln("Điểm của bạn là: " + tong + " - Xếp loại: D <br>");
+        } else {
+            document.writeln("Điểm của bạn là: " + tong + " - Xếp loại: F <br>");
+        }
+
+
+
+
+           
+
+
+
+        
+    </script>
+</body>
+
+</html>
