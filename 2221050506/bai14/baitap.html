@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm và xếp loại</h1>
+    <h2>Công thức: A * 0.6 + B * 0.3 + C * 0.1</h2>
+
+    <div>
+        <p>Điểm A</p>
+        <input type="number" id="diemA" min="0" max="10" >
+    </div>
+
+    <div>
+        <p>Điểm B</p>
+        <input type="number" id="diemB" min="0" max="10" >
+    </div>
+
+    <div>
+        <p>Điểm C</p>
+        <input type="number" id="diemC" min="0" max="10" >
+    </div>
+
+    <div>
+        <button onclick="tinhTong()">Tính tổng & Xếp loại</button>
+    </div>
+
+    <div>
+        <p>Kết quả:</p>
+        <input type="number" id="ketqua" readonly>
+    </div>
+
+    <div>
+        <p>Xếp loại:</p>
+        <input type="text" id="xeploai" readonly>
+    </div>
+
+    <script>
+    function tinhTong() {
+        let diemA = parseFloat(document.getElementById("diemA").value);
+        let diemB = parseFloat(document.getElementById("diemB").value);
+        let diemC = parseFloat(document.getElementById("diemC").value);
+
+        let canhBao = "";
+        if (diemA === "") {
+            canhBao += "Vui lòng nhập điểm A";
+        }
+        if (diemB === "") {
+            canhBao += "Vui lòng nhập điểm B";
+        }
+        if (diemC === "") {
+            canhBao += "Vui lòng nhập điểm C";
+        }
+        if (canhBao) {
+            alert(canhBao);
+            return;
+        }        
+        if (diemA < 0 || diemA > 10 || diemB < 0 || diemB > 10 || diemC < 0 || diemC > 10) {
+            alert("Điểm phải nằm trong khoảng từ 0 đến 10!");
+            return;
+        }
+
+        
+        let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+       
+        let xepLoai = "";
+        if (tong >= 8.5) {
+            xepLoai = "A (Giỏi)";
+        } else if (tong >= 7) {
+            xepLoai = "B (Khá)";
+        } else if (tong >= 5.5) {
+            xepLoai = "C (Trung bình)";
+        } else if (tong >= 4) {
+            xepLoai = "D (Yếu)";
+        } else {
+            xepLoai = "F (Kém)";
+        }
+  
+        document.getElementById("ketqua").value = tong;
+        document.getElementById("xeploai").value = xepLoai;
+    }
+    </script>
+
+</body>
+</html>
