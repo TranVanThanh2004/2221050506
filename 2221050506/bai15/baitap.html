@@ -10,6 +10,7 @@
         justify-content: center;
         height: 100vh;
         background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
     }
     .container {
         background-color: aquamarine;
@@ -24,7 +25,22 @@
     }
     input, button {
         margin: 5px 0;
-        padding: 5px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #hinh img {
+        width: 150px;
+        margin-top: 10px;
+        border-radius: 10px;
     }
 </style>
 </head>
@@ -33,17 +49,17 @@
         <h1>Tính chỉ số BMI</h1>
         <div>
             <p>Nhập vào cân nặng (kg)</p>
-            <input type="number" id="canNang">
+            <input type="number" id="canNang" placeholder="">
         </div>
         <div>
             <p>Nhập vào chiều cao (m)</p>
-            <input type="number" id="chieuCao">
+            <input type="number" step="0.01" id="chieuCao" placeholder="">
         </div>
         <div>
             <button onclick="tinhBMI()">Tính chỉ số BMI</button>
         </div>
         <div>
-            <p>Kết quả:</p>
+            <p>Kết quả BMI:</p>
             <input type="text" id="ketqua" readonly>
         </div>
         <div id="hinh"></div>
@@ -55,8 +71,9 @@
             let chieuCao = parseFloat(document.getElementById("chieuCao").value);
             let canhBao = "";
 
-            if (!canNang) canhBao += "Vui lòng nhập cân nặng.\n";
-            if (!chieuCao) canhBao += "Vui lòng nhập chiều cao.\n";
+            if (!canNang) canhBao += "⚠️ Vui lòng nhập cân nặng.\n";
+            if (!chieuCao) canhBao += "⚠️ Vui lòng nhập chiều cao.\n";
+
             if (canhBao) {
                 alert(canhBao);
                 return;
@@ -64,6 +81,22 @@
 
             let BMI = canNang / (chieuCao * chieuCao);
             document.getElementById("ketqua").value = BMI.toFixed(2);
+
+            let hinh = document.getElementById("hinh");
+            let img = "";
+            if (BMI < 18.5) {
+                img = "1.jpg"; // Thiếu cân
+            } else if (BMI >= 18.5 && BMI <= 24.9) {
+                img = "5.jpg"; // Bình thường
+            } else if (BMI >= 25 && BMI <= 29.9) {
+                img = "2.jpg"; // Thừa cân
+            } else if (BMI >= 30 && BMI <= 39.9) {
+                img = "3.jpg"; // Béo phì cấp độ 1-2
+            } else {
+                img = "4.jpg"; // Béo phì nặng
+            }
+
+            hinh.innerHTML = `<img src="${img}" alt="Kết quả BMI">`;
         }
     </script>
 </body>
