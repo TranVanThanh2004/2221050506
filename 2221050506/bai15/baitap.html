@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Tính chỉ số BMI</title>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    .container {
+        background-color: aquamarine;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input, button {
+        margin: 5px 0;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tính chỉ số BMI</h1>
+        <div>
+            <p>Nhập vào cân nặng (kg)</p>
+            <input type="number" id="canNang">
+        </div>
+        <div>
+            <p>Nhập vào chiều cao (m)</p>
+            <input type="number" id="chieuCao">
+        </div>
+        <div>
+            <button onclick="tinhBMI()">Tính chỉ số BMI</button>
+        </div>
+        <div>
+            <p>Kết quả:</p>
+            <input type="text" id="ketqua" readonly>
+        </div>
+        <div id="hinh"></div>
+    </div>
+
+    <script>
+        function tinhBMI() {
+            let canNang = parseFloat(document.getElementById("canNang").value);
+            let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+            let canhBao = "";
+
+            if (!canNang) canhBao += "Vui lòng nhập cân nặng.\n";
+            if (!chieuCao) canhBao += "Vui lòng nhập chiều cao.\n";
+            if (canhBao) {
+                alert(canhBao);
+                return;
+            }
+
+            let BMI = canNang / (chieuCao * chieuCao);
+            document.getElementById("ketqua").value = BMI.toFixed(2);
+        }
+    </script>
+</body>
+</html>

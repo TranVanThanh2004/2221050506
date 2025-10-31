@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Tính tổng</h1>
+     <h1>Tính hiệu</h1>
+     <h1>Tính tích</h1>
+     <h1>Tính Thương</h1>
+    <div>
+        <p>Nhập vào số thứ nhất</p>
+        <input type="number" id="sothunhat">
+        
+    </div>
+    <div>
+        <p>Nhập vào số thứ hai</p>
+        <input type="number" id="sothuhai">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng</button>
+    </div>
+    <div>
+        <button onclick="tinhHieu()">Tính hiệu</button>
+    </div>
+    <div>
+        <button onclick="tinhNhan()">Tính tích</button>
+    </div>
+    <div>
+        <button onclick="tinhToan()">Tính thương</button>
+    </div>
+    <div>
+        Kết quả: <input type="number" id="ketqua" class="ketqua">
+    </div>
+
+    <script>
+        function tinhTong() {
+            let soThuNhat = parseFloat(document.getElementById("sothunhat").value);
+            let soThuHai = parseFloat(document.getElementById("sothuhai").value);
+            let canhBao = "";
+            if (!soThuNhat) {
+                canhBao += "Vui lòng nhập số thứ nhất";
+            }
+            if (!soThuHai) {
+                canhBao += "Vui lòng nhập số thứ hai";
+            }
+           
+            if (canhBao) {
+                alert(canhBao);
+            }    
+
+            let tong = soThuNhat + soThuHai;
+
+            document.getElementById("ketqua").value = tong;
+        }
+        function tinhHieu() {
+            let soThuNhat = parseFloat(document.getElementById("sothunhat").value);
+            let soThuHai = parseFloat(document.getElementById("sothuhai").value);
+            let canhBao = "";
+            if (!soThuNhat) {
+                canhBao += "Vui lòng nhập số thứ nhất";
+            }
+            if (!soThuHai) {
+                canhBao += "Vui lòng nhập số thứ hai";
+            }
+           
+            if (canhBao) {
+                alert(canhBao);
+            }    
+
+            let hieu = soThuNhat - soThuHai;
+
+            document.getElementById("ketqua").value = hieu;
+        }
+        function tinhNhan() {
+            let soThuNhat = parseFloat(document.getElementById("sothunhat").value);
+            let soThuHai = parseFloat(document.getElementById("sothuhai").value);
+            let canhBao = "";
+            if (!soThuNhat) {
+                canhBao += "Vui lòng nhập số thứ nhất";
+            }
+            if (!soThuHai) {
+                canhBao += "Vui lòng nhập số thứ hai";
+            }
+           
+            if (canhBao) {
+                alert(canhBao);
+            }    
+
+            let nhan = soThuNhat * soThuHai;
+
+            document.getElementById("ketqua").value = nhan;
+        }
+        function tinhChia() {
+            let soThuNhat = parseFloat(document.getElementById("sothunhat").value);
+            let soThuHai = parseFloat(document.getElementById("sothuhai").value);
+            let canhBao = "";
+            if (!soThuNhat) {
+                canhBao += "Vui lòng nhập số thứ nhất";
+            }
+            if (!soThuHai) {
+                canhBao += "Vui lòng nhập số thứ hai";
+            }
+           
+            if (canhBao) {
+                alert(canhBao);
+            }    
+
+            if (soThuHai === 0) {
+                alert("Không thể chia cho 0");
+                return;
+            }
+
+            let chia = soThuNhat / soThuHai;
+
+            document.getElementById("ketqua").value = chia;
+        }
+    </script>
+    <h1>Tính tổng</h1>
+     <h1>Tính hiệu</h1>
+     <h1>Tính tích</h1>
+     <h1>Tính Thương</h1>
+    <div>
+        <p>Nhập vào số thứ nhất</p>
+        <input type="number" id="sothunhat">
+        
+    </div>
+    <div>
+        <p>Nhập vào số thứ hai</p>
+        <input type="number" id="sothuhai">
+    </div>
+    <div>
+        <button onclick="tinhToan()">Tính tổng</button>
+    </div>
+    <div>
+        <button onclick="tinhToan()">Tính hiệu</button>
+    </div>
+    <div>
+        <button onclick="tinhToan()">Tính tích</button>
+    </div>
+    <div>
+        <button onclick="tinhToan()">Tính thương</button>
+    </div>
+    <div>
+        Kết quả: <input type="number" id="ketqua" class="ketqua">
+    </div>
+
+    <script>
+        function tinhToan(phepTinh) {
+            let soThuNhat = parseFloat(document.getElementById("sothunhat").value);
+            let soThuHai = parseFloat(document.getElementById("sothuhai").value);
+            if (phepTinh == 'cong') {
+                ketqua = soThuNhat + soThuHai;
+            }
+            else if (phepTinh == 'tru') {
+                ketqua = soThuNhat - soThuHai;
+            }
+            else if (phepTinh == 'nhan') {
+                ketqua = soThuNhat * soThuHai;
+            }
+            else if (phepTinh == 'chia') {
+                if (soThuHai === 0) {
+                    alert("Không thể chia cho 0");
+                    return;
+                }
+                ketqua = soThuNhat / soThuHai;
+            } 
+
+            document.getElementById("ketqua").value = ketQua;
+        }
+     </script>    
+</body>
+</html>
