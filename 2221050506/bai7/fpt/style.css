@@ -2,23 +2,43 @@ body {
     background-color: grey;
     margin: 0;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ===== HEADER ===== */
 header {
     background-color: black;
     width: 100%;
     height: 10vh;
+    display: flex;
+    align-items: center;
 }
 
+/* Container chính trong header */
 .container {
     width: 70%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* ===== MENU ===== */
 ul {
     display: flex;
     list-style: none;
-    /* gap: 20px; */
+    align-items: center;
     padding: 0;
     margin: 0;
 }
@@ -30,32 +50,19 @@ li {
 a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-
-main {
-    width: 70%;
-    background-color: black;
-    height: 1000px;
-    margin: auto;
+a:hover {
+    color: orange;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 40px;
-    object-fit: contain;
-}
-
-/* Dropdown container */
+/* ===== DROPDOWN ===== */
 .dropdown {
     position: relative;
 }
 
-/* Toggle link (Xem thêm) */
 .dropdown-toggle {
     color: white;
     text-decoration: none;
@@ -64,7 +71,6 @@ main {
     cursor: pointer;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -74,7 +80,7 @@ main {
     display: none;
     flex-direction: column;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
 
@@ -90,7 +96,154 @@ main {
     color: orange;
 }
 
-/* Show menu on hover */
+/* Hiện menu khi hover */
 .dropdown:hover .dropdown-menu {
     display: flex;
+}
+
+/* ===== CHỨC NĂNG BÊN PHẢI ===== */
+.chucnang {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chucnang i {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.chucnang button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chucnang button:hover {
+    background-color: #ff4d00;
+}
+
+.chucnang a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+main {
+    width: 70%;
+    background-color: black;
+    height: 1000px;
+    margin: auto;
+}
+/* ===== BANNER VLEAGUE ===== */
+.banner-vleague {
+    width: 70%;
+    margin: 30px auto;
+    background-color: orange;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.banner-vleague img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* ===== PHIM NỔI BẬT ===== */
+.phim-noi-bat {
+    width: 70%;
+    margin: 40px auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.phim-noi-bat img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Thông tin nổi trên ảnh */
+.phim-info {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.phim-info h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ff3c00;
+}
+
+.phim-info p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.phim-info button {
+    background-color: #ff6600;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.phim-info button:hover {
+    background-color: #ff3300;
+}
+.section-phim {
+    margin: 30px 0;
+}
+
+.section-phim h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.phim-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.phim-item {
+    min-width: 180px;
+    flex-shrink: 0;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.phim-item:hover {
+    transform: scale(1.05);
+}
+
+.phim-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.phim-item p {
+    color: white;
+    margin-top: 8px;
+    font-size: 16px;
 }
